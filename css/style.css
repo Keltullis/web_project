@@ -1,0 +1,174 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    font-family: "Merriweather", serif;
+    scroll-behavior: smooth;
+    
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;      
+    padding: 20px;
+}
+
+main p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #3a4f63
+}
+
+h1, h2, h3 {
+    font-family: "Montserrat", sans-serif;
+}
+
+header h1 {
+    font-style: normal;
+    text-decoration: underline;
+    font-weight: 900;
+    text-transform: uppercase;         
+}
+
+
+main h2 {
+    font-weight: 400;
+    text-transform: lowercase;
+    text-decoration: overline;
+    font-style: italic;
+}
+
+
+section {
+    padding: 20px 0;
+}
+
+
+header,
+footer {
+    background-color: aquamarine;
+    padding: 20px;
+}
+
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+
+header nav ul a {
+    border-radius: 6px;
+    padding: 8px 16px;
+
+}
+
+
+a {
+    color: darkblue;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+a:focus {
+    outline: 3px solid #ffcc00;
+    background-color: #f0f0f0;
+
+}
+
+#info li:nth-child(even) {
+    background-color: rgb(211, 42, 183);
+}
+
+#info li:last-child a::before {
+    content: "Важно! ";
+    background-color: rgb(104, 235, 143);
+    color: white;
+}
+
+main p::first-line {
+    letter-spacing: 2px;
+}
+
+main p:lang(en) {
+    font-style: italic;
+}
+
+#intro {
+    background-color: bisque;
+}
+
+#intro p {
+    color: #726946;
+}
+
+figure {
+    margin: 20px 0;
+    text-align: center;
+}
+
+
+figure img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    border: 4px solid #fff;                    
+    border-radius: 12px;                          
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);   
+}
+
+
+figcaption {
+    margin-top: 6px;
+    font-size: 0.9rem;
+    color: #555;
+    font-style: italic;
+}
+
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 8px;
+}
+.socials a {
+    font-size: 1.3rem;
+    border: 2px solid darkblue;
+}
+
+footer .socials a:hover {
+    background-color: rgb(0, 139, 63);
+}
+
+
+
+
+
+
+
+
+body                    {} /* a=0 b=0 c=1  специфичность = 1   */
+.pink                   {} /* a=0 b=1 c=0  специфичность = 10  */
+#logo                   {} /* a=1 b=0 c=0  специфичность = 100 */
+#mainnav ul             {} /* a=1 b=0 c=1  специфичность = 101 */
+#mainnav .active        {} /* a=1 b=1 c=0  специфичность = 110 */
+#mainnav a:hover        {} /* a=1 b=1 c=1  специфичность = 111 */
+#mainnav ul li.active   {} /* a=1 b=1 c=2  специфичность = 112 */
